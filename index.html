@@ -1,149 +1,74 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!DOCTYPE html><html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Наша Банда</title>
+  <title>Поздравление для Даны</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #ff00cc, #3333ff, #00ffcc, #ffff00);
-      background-size: 600% 600%;
-      animation: gradient 15s ease infinite;
-      color: white;
+      font-family: 'Rubik Mono One', sans-serif;
+      background: url('https://i.ibb.co/NLVm5k8/anime-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
       text-align: center;
     }
-
-    @keyframes gradient {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: #ffccff;
+      padding: 20px;
+      font-size: 2rem;
+      text-shadow: 2px 2px #ff69b4;
     }
-
-    h1 {
-      font-size: 50px;
-      text-shadow: 0 0 15px #fff, 0 0 30px #ff00cc;
-      margin-top: 20px;
+    .content {
+      padding: 20px;
     }
-
-    .memes {
+    .message {
+      font-size: 1.1rem;
+      margin: 20px auto;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(255, 92, 173, 0.4);
+    }
+    .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 20px;
       margin-top: 30px;
     }
-
-    .memes img {
-      width: 200px;
-      height: auto;
+    .gallery img {
+      max-width: 200px;
       border-radius: 10px;
-      box-shadow: 0 0 10px #fff;
-      transition: transform 0.2s;
+      border: 3px solid #ff69b4;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
     }
-
-    .memes img:hover {
-      transform: scale(1.1);
-    }
-
-    .skull {
-      display: none;
-      margin-top: 50px;
-    }
-
-    .skull img {
-      width: 300px;
-      height: auto;
-      border-radius: 50%;
-      box-shadow: 0 0 20px #ff0000;
-      cursor: pointer;
-    }
-
-    /* Адаптивность для мобильных */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 30px;
-      }
-
-      .memes img {
-        width: 150px;
-      }
-    }
-
-    .countdown {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 30px;
-      text-shadow: 0 0 10px #fff, 0 0 20px #ff66cc;
+    .gallery img:hover {
+      transform: scale(1.1) rotate(2deg);
     }
   </style>
 </head>
 <body>
-
-  <h1>Добро пожаловать в Банду КОМПАШКА ГЕНИЙЛАРЫ 🌈</h1>
-
-  <h2>Наши любимые мемы 😎</h2>
-
-  <div class="memes">
-    <img src="mem1.jpg" alt="Мем 1">
-    <img src="mem2.jpg" alt="Мем 2">
-    <img src="mem3.jpg" alt="Мем 3">
-    <img src="mem4.jpg" alt="Мем 4">
-    <img src="mem5.jpg" alt="Мем 5">
-    <img src="mem6.jpg" alt="Мем 6">
-    <img src="mem7.jpg" alt="Мем 7">
-    <img src="mem8.jpg" alt="Мем 8">
-    <img src="mem9.jpg" alt="Мем 9">
-    <img src="mem10.jpg" alt="Мем 10">
-    <img src="mem11.jpg" alt="Мем 11">
-    <img src="mem12.jpg" alt="Мем 12">
-    <img src="mem13.jpg" alt="Мем 13">
-    <img src="mem14.jpg" alt="Мем 14">
-    <img src="mem15.jpg" alt="Мем 15">
-    <img src="mem16.jpg" alt="Мем 16">
-    <img src="mem17.jpg" alt="Мем 17">
-    <img src="mem18.jpg" alt="Мем 18">
+  <header>
+    Дана-сама, учебный год ЗАКОНЧЕН!
+  </header>
+  <div class="content">
+    <div class="message">
+      Ты выжила. Ты прошла через лабы, контрольные, преподов с утра, как герой сёнэн-аниме.<br><br>
+      Настало твоё время сиять, как Сейлор Мун под светом луны!<br>
+      Отдохни, перезарядись, и знай — ты эпична.<br><br>
+      <b>PS:</b> 102 школа — теперь официально легендарное место, потому что там училась ты.
+    </div>
+    <div class="gallery">
+      <!-- Замените src на свои фото -->
+      <img src="photo1.jpg" alt="Дана 1">
+      <img src="photo2.jpg" alt="Дана 2">
+      <img src="photo3.jpg" alt="Дана 3">
+    </div>
   </div>
-
-  <!-- Простой обратный отсчёт внизу -->
-  <div class="countdown" id="simple-countdown"></div>
-
-  <div class="skull" id="skull">
-    <img src="https://i.imgur.com/0zYAY5R.png" alt="Череп" onclick="redirectToGroup()">
-  </div>
-
-  <script>
-    // Простой обратный отсчёт
-    const targetDate = new Date().getTime() + (5 * 7 * 24 * 60 * 60 * 1000); // 5 недель
-
-    // Простой отсчёт
-    const simpleCountdownElement = document.getElementById("simple-countdown");
-
-    function updateSimpleCountdown() {
-      const now = new Date().getTime();
-      const timeLeft = targetDate - now;
-
-      if (timeLeft <= 0) {
-        simpleCountdownElement.innerHTML = "Череп готов!";
-        return;
-      }
-
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      simpleCountdownElement.innerHTML = `До черепа осталось: ${days} дн.`;
-    }
-
-    setInterval(updateSimpleCountdown, 1000);
-
-    // Функция для переноса в группу (например, в Telegram)
-    function redirectToGroup() {
-      // Замените ссылку на вашу группу (например, в Telegram)
-      window.location.href = "https://t.me/your_group"; // Укажите ссылку на вашу группу
-    }
-  </script>
-
 </body>
 </html>
